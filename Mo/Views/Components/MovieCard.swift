@@ -18,7 +18,7 @@ struct MovieCard: View {
         let cardHeight = cardWidth * 9 / 16
 
         ZStack(alignment: .bottomLeading) {
-            AsyncImage(url: movie.backdropURL) { phase in
+            AsyncImage(url: movie.movieImage) { phase in
                 switch phase {
                 case .empty:
                     Color.gray.opacity(0.3)
