@@ -86,7 +86,6 @@ class TopRatedMoviesViewModel: ObservableObject {
             let decodedResponse = try JSONDecoder().decode(MoviesModel.self, from: data)
             self.movies = decodedResponse.results
         } catch {
-            // Fallback JSON
             if let fallbackData = fallbackJSON.data(using: .utf8),
                let fallbackResponse = try? JSONDecoder().decode(MoviesModel.self, from: fallbackData) {
                 self.movies = fallbackResponse.results

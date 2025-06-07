@@ -21,7 +21,6 @@ struct Movie: Codable, Identifiable {
     let release_date: String
     let backdrop_path: String?
 
-    // Computed property for image URL (adjust base URL as needed)
     var backdropURL: URL? {
         guard let path = backdrop_path else { return nil }
         return URL(string: "https://image.tmdb.org/t/p/w780\(path)")

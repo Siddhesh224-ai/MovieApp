@@ -11,7 +11,6 @@ class UpcomingMoviesViewModel: ObservableObject {
     @Published var movies: [Movie] = []
     @Published var errorMessage: String?
 
-    // Your fallback JSON string here
     private let fallbackJSON = """
     {
       "dates": { "maximum": "2025-05-07", "minimum": "2025-04-16" },
@@ -88,7 +87,6 @@ class UpcomingMoviesViewModel: ObservableObject {
             self.movies = decodedResponse.results
             self.errorMessage = nil
         } catch {
-            // Use fallback JSON on failure
             if let fallbackData = fallbackJSON.data(using: .utf8),
                let fallbackResponse = try? JSONDecoder().decode(MoviesModel.self, from: fallbackData) {
                 self.movies = fallbackResponse.results
