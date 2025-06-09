@@ -98,11 +98,9 @@ struct MovieCard: View {
         var currentList = (try? JSONDecoder().decode([Movie].self, from: myListData)) ?? []
 
         if let index = currentList.firstIndex(where: { $0.id == movie.id }) {
-            // Remove movie
             currentList.remove(at: index)
             isInMyList = false
         } else {
-            // Add movie
             currentList.append(movie)
             isInMyList = true
         }
