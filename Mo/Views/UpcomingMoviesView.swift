@@ -13,7 +13,7 @@ struct UpcomingMoviesView: View {
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 20) {
                         ForEach(vm.movies) { movie in
-                            WrapperView(movie: movie)
+                            WrapperView(movie: movie, cat: "Upcoming")
                         }
                     }
                     .padding(.horizontal)

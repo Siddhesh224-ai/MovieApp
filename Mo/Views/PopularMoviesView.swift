@@ -13,7 +13,7 @@ struct PopularMoviesView: View {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 16) {
                     ForEach(viewModel.movies) { movie in
-                        WrapperView(movie: movie)
+                        WrapperView(movie: movie,cat: "Popular")
                     }
                 }
                 .padding()

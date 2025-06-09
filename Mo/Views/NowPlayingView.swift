@@ -16,7 +16,7 @@ struct NowPlayingView: View {
                 ScrollView(.horizontal, showsIndicators: true) {
                     HStack(spacing: 16) {
                         ForEach(viewModel.nowPlayingMovies) { movie in
-                            WrapperView(movie: movie)
+                            WrapperView(movie: movie,cat: "Now Playing")
                         }
                     }
                     .padding()
@@ -40,9 +40,10 @@ extension String: Identifiable {
 
 struct WrapperView: View {
     let movie: Movie
+    let cat: String
     var body: some View {
         NavigationLink(destination: DetailView(movie:movie)) {
-            MovieCard(movie: movie, category: "Now Playing", screenWidth: UIScreen.main.bounds.width)
+            MovieCard(movie: movie, category: cat, screenWidth: UIScreen.main.bounds.width)
         }
     }
 }

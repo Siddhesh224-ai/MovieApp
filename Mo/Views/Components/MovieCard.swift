@@ -67,17 +67,6 @@ struct MovieCard: View {
 
                 HStack {
                     Button {
-                        // Play action placeholder
-                    } label: {
-                        Label("Play", systemImage: "play.fill")
-                            .padding(.horizontal, 14)
-                            .padding(.vertical, 8)
-                            .background(Color.purple)
-                            .foregroundColor(.white)
-                            .cornerRadius(12)
-                    }
-
-                    Button {
                         toggleMyList()
                     } label: {
                         Label(isInMyList ? "In List" : "My List",

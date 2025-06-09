@@ -11,7 +11,7 @@ class NowPlayingMoviesViewModel: ObservableObject {
     @Published var nowPlayingMovies: [Movie] = []
     @Published var errorMessage: String?
 
-    private let apiKey = "Bearer YOUR_TOKEN"
+    private let apiKey = "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2MTcwM2VmMTAyMjRlMGVkYjYzNDRmZmQyMmFmZDI1YiIsIm5iZiI6MTc0OTI3MzU4My42NjEsInN1YiI6IjY4NDNjYmVmNWNhOTVhZTcxNjMwMGY1MSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.F7RTFAoB6zo0Tr-BPKcLbDEkG8GYaHS6oQRIjL3-3Lk"
 
     private let fallbackJSON = """
     {
